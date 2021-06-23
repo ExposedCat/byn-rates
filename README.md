@@ -10,7 +10,8 @@ Web page with BYN rate to all foreign currencies listed on <a href="https://www.
 
 ## Usage
 
-Change `port` at `backend/config.js` (default is `8080`). Then run `npm start` to start server.
+Change `port` at `backend/config.js` (default is `8080`).  
+Then install dependencies using `npm install` and run `npm start` to start server.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
