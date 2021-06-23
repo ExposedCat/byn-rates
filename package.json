@@ -1,0 +1,32 @@
+{
+  "name": "byn-rates",
+  "version": "1.0.0",
+  "description": "Web page with BYN rate to all foreign currencies listed on Belarusian National Bank",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "echo 'No test command'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExposedCat/byn-rates.git"
+  },
+  "keywords": [
+    "byn",
+    "currency",
+    "rate",
+    "rates",
+    "exchange"
+  ],
+  "author": "ExposedCat",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ExposedCat/byn-rates/issues"
+  },
+  "homepage": "https://github.com/ExposedCat/byn-rates#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "type": "module"
+}
