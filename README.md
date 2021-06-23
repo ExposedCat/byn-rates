@@ -2,6 +2,12 @@
 
 Web page with BYN rate to all foreign currencies listed on <a href="https://www.nbrb.by/statistics/rates/ratesdaily.asp">Belarusian National Bank</a>.
 
+## Preview
+
+<p align="center">
+  <img src="./preview.png" alt="Preview"/>
+</p>
+
 ## Usage
 
 Change `port` at `backend/config.js` (default is `8080`). Then run `npm start` to start server.
