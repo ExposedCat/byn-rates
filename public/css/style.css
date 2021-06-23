@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+body {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.flag {
+    width: 20px;
+    vertical-align: middle;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    width: 200px;
+    min-height: 30px;
+    padding: 5px;
+    border: 1px solid #009688;
+}
+
+table {
+    border: 0;
+}

@@ -1,17 +1,32 @@
-const button = document.querySelector('#load-rates')
-const list = document.querySelector('#rates-list')
+const table = document.querySelector('#rates-table tbody')
 
-button.addEventListener('click', async event => {
-    button.disabled = true
-    button.value = 'Rates are loading..'
-    list.innerHTML = ''
+window.onload = async event => {
     const actualCurrencies = await getActualCurrencies()
     for (const currency of actualCurrencies) {
-        const item = document.createElement('li')
-        const rate = currency.Cur_OfficialRate / currency.Cur_Scale
-        item.innerText = `${currency.Cur_Abbreviation}:BYN = ${rate.toFixed(4)}:1`
-        list.appendChild(item)
+        const row = document.createElement('tr')
+        
+        const flagWrapper = document.createElement('td')
+        const flagUri = `https://www.countryflags.io/${currency.Cur_Abbreviation.slice(0, 2)}/flat/64.png`
+        let flag = `<img src="${flagUri}" class="flag">`
+
+        const nameWrapper = document.createElement('td')
+        nameWrapper.innerText = `${currency.Cur_Scale} ${currency.Cur_Name}`
+
+        const currencyWrapper = document.createElement('span')
+        currencyWrapper.innerText = `  ${currency.Cur_Abbreviation}`
+
+        const rateWrapper = document.createElement('td')
+        rateWrapper.innerText = `${currency.Cur_OfficialRate.toFixed(4)}`
+
+        const dateWrapper = document.createElement('td')
+        dateWrapper.innerText = `${new Date(currency.Date).toLocaleDateString('RU')}`
+
+        flagWrapper.insertAdjacentHTML('beforeend', flag)
+        flagWrapper.appendChild(currencyWrapper)
+        row.appendChild(flagWrapper)
+        row.appendChild(nameWrapper)
+        row.appendChild(rateWrapper)
+        row.appendChild(dateWrapper)
+        table.appendChild(row)
     }
-    button.disabled = false
-    button.value = 'Reload rates'
-})
+}

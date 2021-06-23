@@ -10,9 +10,23 @@
 </head>
 
 <body>
-    <input type="button" value="Load rates" id="load-rates">
-    <ul id="rates-list"></ul>
-    
+    <table border="1" id="rates-table">
+        <caption>
+            <h2>
+                Таблица курсов валют к Белорусскому рублю
+            </h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>Буквенный код валюты</th>
+                <th>Количество единиц иностранной валюты</th>
+                <th>Курс</th>
+                <th>Дата установки курса</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
     <script src="./js/utils.js"></script>
     <script src="./js/main.js"></script>
 </body>
